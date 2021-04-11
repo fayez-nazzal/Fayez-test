@@ -6,7 +6,7 @@ const SectionLabel = (props) => {
 
   return (
     <span
-      className={`safe  ${
+      className={`safe   ${
         !props.whiteText
           ? `bg-${themeColor} text-${themeColor}`
           : "bg-white text-white"

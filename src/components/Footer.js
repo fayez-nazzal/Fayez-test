@@ -15,7 +15,7 @@ const Footer = () => {
   const themeColor = useSelector((state) => state.theme.currentColor);
 
   return (
-    <div className={`safe bg-${themeColor} sticky pt-20 text-center`}>
+    <div className={`safe  bg-${themeColor} sticky pt-20 text-center`}>
       <div className="m-auto">
         <Logo />
         <p className="py-6 text-xl text-gray-300">
