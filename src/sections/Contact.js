@@ -103,7 +103,7 @@ const Contact = () => {
         />
         {errors.message && <Alert text={errors.message.message} />}
         <button
-          className={`bg-${themeColor} focus:outline-none flex items-center justify-center px-8 py-3 text-xl text-white uppercase rounded-full`}
+          className={`safe bg-${themeColor} focus:outline-none flex items-center justify-center px-8 py-3 text-xl text-white uppercase rounded-full`}
           type="submit"
         >
           submit

@@ -23,7 +23,7 @@ const Testimonial = () => {
   return (
     <section
       id="testimonial"
-      className={`testimonial bg-${themeColor} flex flex-col items-center justify-center px-16 pt-16 pb-12 text-center`}
+      className={`safe testimonial bg-${themeColor} flex flex-col items-center justify-center px-16 pt-16 pb-12 text-center`}
     >
       <ViewportNode onEnterViewport={onViewportEnter} />
       <SectionLabel whiteText>TESTIMONIAL</SectionLabel>

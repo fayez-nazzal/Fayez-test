@@ -18,11 +18,11 @@ const Home = () => {
   return (
     <section
       id="home"
-      className={`diagonal-section bg-${themeColor} relative py-32`}
+      className={`safe diagonal-section bg-${themeColor} relative py-32`}
     >
       <ViewportNode onEnterViewport={onViewportEnter} />
       <div
-        className={`top-20 rounded-l-md absolute right-0 z-40 p-4 pb-6 transition-all duration-500 ease-in-out transform ${
+        className={`safe top-20 rounded-l-md absolute right-0 z-40 p-4 pb-6 transition-all duration-500 ease-in-out transform ${
           !themeMenuOpen && "translate-x-48"
         } bg-white`}
       >
@@ -67,7 +67,7 @@ const Home = () => {
           </p>
           <div className="w-4/5 mx-auto mt-12">
             <a
-              className={`text-${themeColor} px-8 py-3 text-xl font-semibold bg-white rounded-full`}
+              className={`safe text-${themeColor} px-8 py-3 text-xl font-semibold bg-white rounded-full`}
               href={pdf}
               target="_blank"
               rel="noreferrer"
@@ -92,7 +92,7 @@ const StyleButton = (props) => {
   return (
     <div
       onClick={onClick}
-      className={`w-8 h-8 cursor-pointer rounded-full bg-${props.color}`}
+      className={`safe w-8 h-8 cursor-pointer rounded-full bg-${props.color}`}
     ></div>
   );
 };

@@ -7,11 +7,11 @@ const Card = (props) => {
 
   return (
     <div
-      className={`group color-white hover:bg-${themeColor} hover:-translate-y-4 flex flex-col items-center justify-around p-6 pb-12 my-10 transition duration-500 ease-in-out transform bg-white rounded-md shadow-md`}
+      className={`safe group color-white hover:bg-${themeColor} hover:-translate-y-4 flex flex-col items-center justify-around p-6 pb-12 my-10 transition duration-500 ease-in-out transform bg-white rounded-md shadow-md`}
     >
       <Icon
         size={42}
-        className={`text-${themeColor} group-hover:text-white my-4 transition duration-500 ease-in-out`}
+        className={`safe text-${themeColor} group-hover:text-white my-4 transition duration-500 ease-in-out`}
       />
       <h3 className="group-hover:text-white my-2 text-3xl font-semibold text-gray-800 transition duration-500 ease-in-out">
         {props.title}
