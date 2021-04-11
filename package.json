@@ -1,0 +1,61 @@
+{
+  "name": "react-tailwind-starter",
+  "version": "0.1.0",
+  "private": true,
+  "engines": {
+    "node": "15.x"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.5.1",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.5.0",
+    "@testing-library/user-event": "^7.2.1",
+    "history": "^5.0.0",
+    "node-sass": "^5.0.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-floaterjs": "^1.0.6",
+    "react-hook-form": "^7.0.5",
+    "react-icons": "^4.2.0",
+    "react-in-viewport": "^1.0.0-alpha.16",
+    "react-redux": "^7.2.3",
+    "react-router-dom": "^6.0.0-beta.0",
+    "react-router-hash-link": "^2.4.0",
+    "react-scripts": "^4.0.3",
+    "swiper": "^6.5.6",
+    "tailwindcss": "^1.4.6"
+  },
+  "scripts": {
+    "purge:css": "cross-env NODE_ENV=production postcss src/tailwind.css -o src/index.css",
+    "build:css": "postcss src/tailwind.css -o src/index.css",
+    "watch:css": "postcss src/tailwind.css -o src/index.css -w",
+    "start": "npm run build:css && react-scripts start",
+    "build": "npm run purge:css && react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.8.0",
+    "cross-env": "^7.0.2",
+    "cssnano": "^4.1.10",
+    "eslint": "^7.24.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-react": "^7.23.2",
+    "postcss-cli": "^7.1.1"
+  }
+}

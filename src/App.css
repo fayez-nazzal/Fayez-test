@@ -1,0 +1,118 @@
+html {
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.diagonal-section::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 112px;
+  background-image: url("./images/shape-bg.png");
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+  z-index: 20;
+}
+
+.loader-circle {
+  width: 100px;
+  height: 100px; /* as the half of the width */
+  border: 7px solid #ffffff;
+  opacity: 0.1;
+  border-left: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-radius: 50%;
+  animation: rotate 5s linear infinite;
+}
+
+.loader-top {
+  top: 140px;
+  right: 20px;
+}
+
+.loader-bottom {
+  bottom: 300px;
+  right: 180px;
+}
+
+.loader-square {
+  top: 300px;
+  width: 110px;
+  height: 110px; /* as the half of the width */
+  border: 7px solid #ffffff;
+  opacity: 0.1;
+  left: -10px;
+  animation: rotate 8s linear infinite;
+}
+
+.resize-circle {
+  background-color: #ffffff;
+  border-radius: 300px;
+  opacity: 0.1;
+  animation: resize 5s linear infinite;
+  bottom: 440px;
+  animation-direction: alternate-reverse;
+}
+
+.testimonial {
+  position: relative;
+  display: block;
+  z-index: 2;
+}
+
+.testimonial::after {
+  content: "";
+  background-image: url("./images/testimonial.jpg");
+  background-position: center;
+  background-attachment: fixed;
+  opacity: 0.18;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 0;
+  position: absolute;
+}
+
+.navbar {
+  z-index: 1010;
+  backdrop-filter: blur(12px);
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes expand {
+  0% {
+    height: 0rem;
+  }
+  100% {
+    height: 20.5rem;
+  }
+}
+
+@keyframes resize {
+  0% {
+    width: 120px;
+    height: 120px;
+    right: -60px;
+  }
+  100% {
+    width: 180px;
+    height: 180px;
+    right: -90px;
+  }
+}
