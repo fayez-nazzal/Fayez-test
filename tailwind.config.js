@@ -2,11 +2,6 @@ module.exports = {
   important: true,
   purge: {
     content: ["./src/**/*.html", "./src/**/*.jsx", "./src/**/*.js"],
-    options: {
-      safelist: {
-        greedy: ["/safe$/"],
-      },
-    },
   },
   theme: {
     extend: {
