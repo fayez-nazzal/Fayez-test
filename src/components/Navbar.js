@@ -2,17 +2,28 @@ import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { toggle as toggleNavMenu } from "../redux/navOpen";
 import { toggle as toggleThemeMenu } from "../redux/theme";
+import { useBreakpoints } from "react-breakpoints-hook";
 
 import { BsList } from "react-icons/bs";
 import Link from "./HashLink";
 import { HashLink as RawHashLink } from "react-router-hash-link";
 import Logo from "./Logo";
 import { FaCog } from "react-icons/fa";
+import {
+  bgClassFromTheme,
+  textClassFromTheme,
+} from "../helpers/classFromTheme";
 
 const Navbar = () => {
   const navOpen = useSelector((state) => state.navOpen.value);
   const dispatch = useDispatch();
   const themeColor = useSelector((state) => state.theme.currentColor);
+  let { lg } = useBreakpoints({
+    xs: { min: 0, max: null },
+    sm: { min: 640, max: null },
+    md: { min: 768, max: null },
+    lg: { min: 1280, max: null },
+  });
 
   const onMenuButtonClick = () => {
     dispatch(toggleNavMenu());
@@ -25,60 +36,34 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`safe  navbar border-box ${
-        themeColor === "custom_crimson"
-          ? "bg-custom_crimson"
-          : themeColor === "custom_blue"
-          ? "bg-custom_blue"
-          : themeColor === "custom_indigo"
-          ? "bg-custom_indigo"
-          : themeColor === "custom_aqua"
-          ? "bg-custom_aqua"
-          : themeColor === "custom_black"
-          ? "bg-custom_black"
-          : " bg-custom_grey"
-      } truncate overflow-visible fixed top-0 left-0 right-0 z-50 flex flex-wrap items-center justify-center transition-all duration-300 ease-in-out bg-opacity-75 border-b-2 border-opacity-50 border-white`}
+      className={`safe navbar border-box ${bgClassFromTheme(
+        themeColor
+      )} truncate overflow-visible fixed top-0 left-0 right-0 z-50 flex ${
+        !lg && "flex-wrap"
+      } items-center justify-center lg:justify-around transition-all duration-300 ease-in-out bg-opacity-75 lg:px-4 border-b-2 border-opacity-50 border-white`}
     >
-      <div className="flex items-center w-4/5 h-20">
+      <div className="lg:ml-12 flex items-center w-4/5 h-20">
         <Logo />
         <button
           onClick={onMenuButtonClick}
-          className="focus:outline-none px-2 pt-2 pb-1 ml-auto bg-white rounded-md"
+          className="lg:hidden focus:outline-none px-2 pt-2 pb-1 ml-auto bg-white rounded-md"
         >
           <BsList
-            className={`safe  ${
-              themeColor === "custom_crimson"
-                ? "text-custom_crimson"
-                : themeColor === "custom_blue"
-                ? "text-custom_blue"
-                : themeColor === "custom_indigo"
-                ? "text-custom_indigo"
-                : themeColor === "custom_aqua"
-                ? "text-custom_aqua"
-                : themeColor === "custom_black"
-                ? "text-custom_black"
-                : " text-custom_grey"
-            }`}
+            className={`safe  ${textClassFromTheme(themeColor)}`}
             size={32}
           />
         </button>
       </div>
       <div
         className={`safe  ${
-          !navOpen ? "h-0" : "h-nav_menu"
-        } px-4 font-medium transition-all duration-300 ease-in ${
-          themeColor === "custom_crimson"
-            ? "text-custom_crimson"
-            : themeColor === "custom_blue"
-            ? "text-custom_blue"
-            : themeColor === "custom_indigo"
-            ? "text-custom_indigo"
-            : themeColor === "custom_aqua"
-            ? "text-custom_aqua"
-            : themeColor === "custom_black"
-            ? "text-custom_black"
-            : " text-custom_grey"
-        } truncate flex flex-col w-4/5 mx-auto text-xl bg-white`}
+          !lg && (!navOpen ? "h-0" : "h-nav_menu")
+        } px-4 font-medium transition-all duration-300 lg:justify-around ease-in ${
+          lg ? "text-white" : textClassFromTheme(themeColor)
+        } truncate flex ${
+          !lg && "flex-col"
+        } w-4/5 lg:w-full mx-auto lg:mr-12 text-xl ${
+          !lg && "bg-white"
+        } lg:items-center`}
       >
         <Link to="/#home" name="Home" />
         <Link to="/#about" name="About" />

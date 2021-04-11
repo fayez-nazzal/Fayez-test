@@ -23,36 +23,49 @@ const Services = () => {
   return (
     <section
       id="services"
-      className="relative top-0 left-0 flex flex-col items-center justify-center px-16 py-32 overflow-auto"
+      className="relative top-0 left-0 flex flex-col items-center justify-center py-32 overflow-auto"
     >
       <ViewportNode onEnterViewport={onViewportEnter} />
       <SectionLabel>Services</SectionLabel>
       <h2 className="mb-12 text-4xl font-bold tracking-wide">
         Here are my expertises
       </h2>
-      <div className="text-custom_grey self-stretch px-16">
-        <Card icon={FaDeaf} title="Innovative Ideas">
-          Innovative Ideas are the most important things in web development.
-        </Card>
-        <Card icon={FaUsers} title="Team Work">
-          Teamwork spirit and cooperation together should be more helpful to be
-          success.
-        </Card>
-        <Card icon={FaCalendar} title="Punctuality">
-          {`Punctuality is one of my Advantages, it's very important in all
+      <div className="text-custom_grey md:grid-rows-3 lg:grid-rows-2 grid self-stretch grid-cols-6 gap-8 px-16">
+        <div className="md:col-end-4 lg:col-end-3 col-start-1 col-end-7">
+          <Card icon={FaDeaf} title="Innovative Ideas">
+            Innovative Ideas are the most important things in web development.
+          </Card>
+        </div>
+        <div className="md:col-start-4 lg:col-start-3 lg:col-end-5 col-start-1 col-end-7">
+          <Card icon={FaUsers} title="Team Work">
+            Teamwork spirit and cooperation together should be more helpful to
+            be success.
+          </Card>
+        </div>
+        <div className="md:col-end-4 lg:col-start-5 lg:col-end-7 col-start-1 col-end-7">
+          <Card icon={FaCalendar} title="Punctuality">
+            {`Punctuality is one of my Advantages, it's very important in all
           contracts.`}
-        </Card>
-        <Card icon={FaCogs} title="Responsiveness">
-          My all projects are responsive for Desktop/Mobile application.
-        </Card>
-        <Card icon={FaEye} title="Pixel Perfect">
-          Once the design is provided, the project will be completed as pixel
-          perfectly.
-        </Card>
-        <Card icon={FaFighterJet} title="Fast Learner">
-          {`For the latest tech, I'm always trying to learn new and challengeable
+          </Card>
+        </div>
+        <div className="md:col-start-4 lg:col-end-3 lg:col-start-1 col-start-1 col-end-7">
+          <Card icon={FaCogs} title="Responsiveness">
+            My all projects are responsive for Desktop/Mobile application.
+          </Card>
+        </div>
+        <div className="md:col-end-4 lg:col-start-3 lg:col-end-5 col-start-1 col-end-7">
+          <Card icon={FaEye} title="Pixel Perfect">
+            Once the design is provided, the project will be completed as pixel
+            perfectly.
+          </Card>
+        </div>
+
+        <div className="md:col-start-4 lg:col-start-5 lg:col-end-7 col-start-1 col-end-7">
+          <Card icon={FaFighterJet} title="Fast Learner">
+            {`For the latest tech, I'm always trying to learn new and challengeable
           aspect.`}
-        </Card>
+          </Card>
+        </div>
       </div>
     </section>
   );

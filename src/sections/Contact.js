@@ -11,6 +11,7 @@ import InfoDiv from "../components/InfoDiv";
 import { useDispatch, useSelector } from "react-redux";
 import { setSection } from "../redux/viewSection";
 import ViewportNode from "../components/ViewportNode";
+import { bgClassFromTheme } from "../helpers/classFromTheme";
 
 const fieldClasses =
   "border-grey-400 transition duration-500 ease-in-out px-3 focus:border-custom_blue focus:outline-none border-b-2.5 block w-full  py-4 border-solid text-xl my-6";
@@ -46,82 +47,74 @@ const Contact = () => {
       <h2 className="z-10 mt-4 mb-12 text-4xl font-bold tracking-wide text-center">
         Please send me your info in this form
       </h2>
-      <div className="flex flex-col items-stretch w-full">
-        <InfoDiv
-          icon={FaMapMarkerAlt}
-          title="Eocation"
-          info="Haidian district, Beijing, 100086"
-        />
-        <InfoDiv
-          icon={FaEnvelope}
-          title="Email"
-          info="jianxing.dev@gmail.com"
-        />
-        <InfoDiv
-          icon={FaPhoneAlt}
-          title="Call on me"
-          info="(+86) 151 4034 5091"
-        />
-      </div>
-      <form
-        className="border-box w-full px-4"
-        onSubmit={handleSubmit(onSubmit)}
-      >
-        <input
-          id="name"
-          {...register("name", { required: "Name is required" })}
-          placeholder="Your Name"
-          className={inputClasses}
-        />
-        {errors.name && <Alert text={errors.name.message} />}
-        <input
-          id="email"
-          {...register("email", {
-            required: "Email is required",
-            pattern: {
-              value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-              message: "Invalid email",
-            },
-          })}
-          placeholder="Your Email"
-          className={inputClasses}
-        />
-        {errors.email && <Alert text={errors.email.message} />}
-        <input
-          {...register("subject", { required: "Subject is required" })}
-          placeholder="Your Subject"
-          name="subject"
-          id="subject"
-          className={inputClasses}
-        />
-        {errors.subject && <Alert text={errors.subject.message} />}
-        <textarea
-          {...register("message", { required: "Message is required" })}
-          placeholder="Message"
-          name="message"
-          className={textAreaClasses}
-        />
-        {errors.message && <Alert text={errors.message.message} />}
-        <button
-          className={`safe  ${
-            themeColor === "custom_crimson"
-              ? "bg-custom_crimson"
-              : themeColor === "custom_blue"
-              ? "bg-custom_blue"
-              : themeColor === "custom_indigo"
-              ? "bg-custom_indigo"
-              : themeColor === "custom_aqua"
-              ? "bg-custom_aqua"
-              : themeColor === "custom_black"
-              ? "bg-custom_black"
-              : " bg-custom_grey"
-          } focus:outline-none flex items-center justify-center px-8 py-3 text-xl text-white uppercase rounded-full`}
-          type="submit"
+      <div className="md:flex-row-reverse flex flex-col w-full">
+        <div className="flex flex-col items-stretch w-full">
+          <InfoDiv
+            icon={FaMapMarkerAlt}
+            title="Location"
+            info="Haidian district, Beijing, 100086"
+          />
+          <InfoDiv
+            icon={FaEnvelope}
+            title="Email"
+            info="jianxing.dev@gmail.com"
+          />
+          <InfoDiv
+            icon={FaPhoneAlt}
+            title="Call on me"
+            info="(+86) 151 4034 5091"
+          />
+        </div>
+        <form
+          className="border-box md:mx-8 md:grid md:grid-cols-2 md:gap-10 w-full px-4"
+          onSubmit={handleSubmit(onSubmit)}
         >
-          submit
-          <FaPaperPlane className="ml-2" />
-        </button>
-      </form>
+          <input
+            id="name"
+            {...register("name", { required: "Name is required" })}
+            placeholder="Your Name"
+            className={inputClasses}
+          />
+          {errors.name && <Alert text={errors.name.message} />}
+          <input
+            id="email"
+            {...register("email", {
+              required: "Email is required",
+              pattern: {
+                value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                message: "Invalid email",
+              },
+            })}
+            placeholder="Your Email"
+            className={inputClasses}
+          />
+          {errors.email && <Alert text={errors.email.message} />}
+          <input
+            {...register("subject", { required: "Subject is required" })}
+            placeholder="Your Subject"
+            name="subject"
+            id="subject"
+            className={inputClasses + " md:col-span-2"}
+          />
+          {errors.subject && <Alert text={errors.subject.message} />}
+          <textarea
+            {...register("message", { required: "Message is required" })}
+            placeholder="Message"
+            name="message"
+            className={textAreaClasses + " md:col-span-2"}
+          />
+          {errors.message && <Alert text={errors.message.message} />}
+          <button
+            className={`safe md:col-span-2 md:w-1/2 lg:w-1/3  ${bgClassFromTheme(
+              themeColor
+            )} focus:outline-none flex items-center justify-center px-8 py-3 text-xl text-white uppercase rounded-full`}
+            type="submit"
+          >
+            submit
+            <FaPaperPlane className="ml-2" />
+          </button>
+        </form>
+      </div>
     </section>
   );
 };

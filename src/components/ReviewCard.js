@@ -3,7 +3,7 @@ import { FaQuoteLeft, FaQuoteRight, FaStar, FaEnvelope } from "react-icons/fa";
 
 const ReviewCard = (props) => {
   return (
-    <div className="z-10 p-4 m-2 bg-white rounded-lg shadow-md">
+    <div className="z-10 h-full p-4 m-2 bg-white rounded-lg shadow-md">
       <div className="px-6">
         <p className="text-custom_grey text-xl italic tracking-wide">
           <FaQuoteLeft

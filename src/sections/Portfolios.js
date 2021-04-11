@@ -16,12 +16,16 @@ import { useDispatch } from "react-redux";
 import { setSection } from "../redux/viewSection";
 import ViewportNode from "../components/ViewportNode";
 import SwiperButtons from "../components/SwiperButtons";
+import { useBreakpoints } from "react-breakpoints-hook";
 
 SwiperCore.use([Autoplay]);
 
 const Portfolios = () => {
   const dispatch = useDispatch();
   const [swiper, setSwiper] = useState(null);
+  let { lg } = useBreakpoints({
+    lg: { min: 1280, max: null },
+  });
 
   const onViewportEnter = () => {
     dispatch(setSection("portfolios"));
@@ -37,9 +41,10 @@ const Portfolios = () => {
       <h2 className="mx-8 mb-12 text-4xl font-bold tracking-wide text-center">
         Here are my representative projects
       </h2>
-      <div className="border-box w-screen px-16">
+      <div className="border-box lg:px-32 w-screen px-16">
         <Swiper
-          slidesPerView={1}
+          slidesPerView={lg ? 2 : 1}
+          spaceBetween={32}
           autoplay={{
             delay: 3500,
             disableOnInteraction: false,
