@@ -61,6 +61,17 @@ body {
   animation-direction: alternate-reverse;
 }
 
+@media only screen and (min-width: 800px) {
+  .resize-circle {
+    bottom: 200px;
+  }
+
+  .loader-bottom {
+    bottom: 200px;
+    right: 700px;
+  }
+}
+
 .testimonial {
   position: relative;
   display: block;

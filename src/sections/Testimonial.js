@@ -9,6 +9,7 @@ import { setSection } from "../redux/viewSection";
 import ViewportNode from "../components/ViewportNode";
 import SwiperButtons from "../components/SwiperButtons";
 import { useBreakpoints } from "react-breakpoints-hook";
+import { bgClassFromTheme } from "../helpers/classFromTheme";
 
 SwiperCore.use([Autoplay]);
 
@@ -26,19 +27,9 @@ const Testimonial = () => {
   return (
     <section
       id="testimonial"
-      className={`safe  testimonial ${
-        themeColor === "custom_crimson"
-          ? "bg-custom_crimson"
-          : themeColor === "custom_blue"
-          ? "bg-custom_blue"
-          : themeColor === "custom_indigo"
-          ? "bg-custom_indigo"
-          : themeColor === "custom_aqua"
-          ? "bg-custom_aqua"
-          : themeColor === "custom_black"
-          ? "bg-custom_black"
-          : " bg-custom_grey"
-      } flex flex-col items-center justify-center px-16 pt-16 pb-12 text-center`}
+      className={`safe  testimonial ${bgClassFromTheme(
+        themeColor
+      )} flex flex-col items-center justify-center px-16 pt-16 pb-12 text-center`}
     >
       <ViewportNode onEnterViewport={onViewportEnter} />
       <SectionLabel whiteText>TESTIMONIAL</SectionLabel>

@@ -14,7 +14,7 @@ import ViewportNode from "../components/ViewportNode";
 import { bgClassFromTheme } from "../helpers/classFromTheme";
 
 const fieldClasses =
-  "border-grey-400 transition duration-500 ease-in-out px-3 focus:border-custom_blue focus:outline-none border-b-2.5 block w-full  py-4 border-solid text-xl my-6";
+  "border-gray-400 transition font-light duration-500 placeholder-gray-500::placeholder	 ease-in-out px-3 focus:border-custom_blue focus:outline-none border-b-2.5 block w-full  py-4 border-solid text-xl my-6";
 const inputClasses = `h-16 ${fieldClasses}`;
 const textAreaClasses = `h-msg ${fieldClasses}`;
 
