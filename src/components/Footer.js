@@ -15,7 +15,21 @@ const Footer = () => {
   const themeColor = useSelector((state) => state.theme.currentColor);
 
   return (
-    <div className={`safe  bg-${themeColor} sticky pt-20 text-center`}>
+    <div
+      className={`safe  ${
+        themeColor === "custom_crimson"
+          ? "bg-custom_crimson"
+          : themeColor === "custom_blue"
+          ? "bg-custom_blue"
+          : themeColor === "custom_indigo"
+          ? "bg-custom_indigo"
+          : themeColor === "custom_aqua"
+          ? "bg-custom_aqua"
+          : themeColor === "custom_black"
+          ? "bg-custom_black"
+          : " bg-custom_grey"
+      } sticky pt-20 text-center`}
+    >
       <div className="m-auto">
         <Logo />
         <p className="py-6 text-xl text-gray-300">

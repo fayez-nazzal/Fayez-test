@@ -11,7 +11,19 @@ const IconedLink = (props) => {
       href={props.to}
     >
       <Icon
-        className={`safe  text-white  transition-colors duration-300 ease-in-out group-hover:text-${themeColor}`}
+        className={`safe  text-white  transition-colors duration-300 ease-in-out ${
+          themeColor === "custom_crimson"
+            ? "group-hover:text-custom_crimson"
+            : themeColor === "custom_blue"
+            ? "group-hover:text-custom_blue"
+            : themeColor === "custom_indigo"
+            ? "group-hover:text-custom_indigo"
+            : themeColor === "custom_aqua"
+            ? "group-hover:text-custom_aqua"
+            : themeColor === "custom_black"
+            ? "group-hover:text-custom_black"
+            : " group-hover:text-custom_grey"
+        }`}
         size={20}
       />
     </a>

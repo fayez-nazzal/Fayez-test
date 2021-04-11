@@ -7,11 +7,35 @@ const Card = (props) => {
 
   return (
     <div
-      className={`safe  group color-white hover:bg-${themeColor} hover:-translate-y-4 flex flex-col items-center justify-around p-6 pb-12 my-10 transition duration-500 ease-in-out transform bg-white rounded-md shadow-md`}
+      className={`group color-white ${
+        themeColor === "hover:custom_crimson"
+          ? "hover:bg-custom_crimson"
+          : themeColor === "custom_blue"
+          ? "hover:bg-custom_blue"
+          : themeColor === "custom_indigo"
+          ? "hover:bg-custom_indigo"
+          : themeColor === "custom_aqua"
+          ? "hover:bg-custom_aqua"
+          : themeColor === "custom_black"
+          ? "hover:bg-custom_black"
+          : " hover:bg-custom_grey"
+      } hover:-translate-y-4 flex flex-col items-center justify-around p-6 pb-12 my-10 transition duration-500 ease-in-out transform bg-white rounded-md shadow-md`}
     >
       <Icon
         size={42}
-        className={`safe  text-${themeColor} group-hover:text-white my-4 transition duration-500 ease-in-out`}
+        className={`${
+          themeColor === "custom_crimson"
+            ? "text-custom_crimson"
+            : themeColor === "custom_blue"
+            ? "text-custom_blue"
+            : themeColor === "custom_indigo"
+            ? "text-custom_indigo"
+            : themeColor === "custom_aqua"
+            ? "text-custom_aqua"
+            : themeColor === "custom_black"
+            ? "text-custom_black"
+            : " text-custom_grey"
+        } group-hover:text-white my-4 transition duration-500 ease-in-out`}
       />
       <h3 className="group-hover:text-white my-2 text-3xl font-semibold text-gray-800 transition duration-500 ease-in-out">
         {props.title}

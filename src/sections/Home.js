@@ -18,7 +18,19 @@ const Home = () => {
   return (
     <section
       id="home"
-      className={`safe  diagonal-section bg-${themeColor} relative py-32`}
+      className={`safe  diagonal-section ${
+        themeColor === "custom_crimson"
+          ? "bg-custom_crimson"
+          : themeColor === "custom_blue"
+          ? "bg-custom_blue"
+          : themeColor === "custom_indigo"
+          ? "bg-custom_indigo"
+          : themeColor === "custom_aqua"
+          ? "bg-custom_aqua"
+          : themeColor === "custom_black"
+          ? "bg-custom_black"
+          : " bg-custom_grey"
+      } relative py-32`}
     >
       <ViewportNode onEnterViewport={onViewportEnter} />
       <div
@@ -67,7 +79,19 @@ const Home = () => {
           </p>
           <div className="w-4/5 mx-auto mt-12">
             <a
-              className={`safe  text-${themeColor} px-8 py-3 text-xl font-semibold bg-white rounded-full`}
+              className={`safe  ${
+                themeColor === "custom_crimson"
+                  ? "text-custom_crimson"
+                  : themeColor === "custom_blue"
+                  ? "text-custom_blue"
+                  : themeColor === "custom_indigo"
+                  ? "text-custom_indigo"
+                  : themeColor === "custom_aqua"
+                  ? "text-custom_aqua"
+                  : themeColor === "custom_black"
+                  ? "text-custom_black"
+                  : " text-custom_grey"
+              } px-8 py-3 text-xl font-semibold bg-white rounded-full`}
               href={pdf}
               target="_blank"
               rel="noreferrer"

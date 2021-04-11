@@ -25,7 +25,19 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`safe  navbar border-box bg-${themeColor} truncate overflow-visible fixed top-0 left-0 right-0 z-50 flex flex-wrap items-center justify-center transition-all duration-300 ease-in-out bg-opacity-75 border-b-2 border-opacity-50 border-white`}
+      className={`safe  navbar border-box ${
+        themeColor === "custom_crimson"
+          ? "bg-custom_crimson"
+          : themeColor === "custom_blue"
+          ? "bg-custom_blue"
+          : themeColor === "custom_indigo"
+          ? "bg-custom_indigo"
+          : themeColor === "custom_aqua"
+          ? "bg-custom_aqua"
+          : themeColor === "custom_black"
+          ? "bg-custom_black"
+          : " bg-custom_grey"
+      } truncate overflow-visible fixed top-0 left-0 right-0 z-50 flex flex-wrap items-center justify-center transition-all duration-300 ease-in-out bg-opacity-75 border-b-2 border-opacity-50 border-white`}
     >
       <div className="flex items-center w-4/5 h-20">
         <Logo />
@@ -33,13 +45,40 @@ const Navbar = () => {
           onClick={onMenuButtonClick}
           className="focus:outline-none px-2 pt-2 pb-1 ml-auto bg-white rounded-md"
         >
-          <BsList className={`safe  text-${themeColor}`} size={32} />
+          <BsList
+            className={`safe  ${
+              themeColor === "custom_crimson"
+                ? "text-custom_crimson"
+                : themeColor === "custom_blue"
+                ? "text-custom_blue"
+                : themeColor === "custom_indigo"
+                ? "text-custom_indigo"
+                : themeColor === "custom_aqua"
+                ? "text-custom_aqua"
+                : themeColor === "custom_black"
+                ? "text-custom_black"
+                : " text-custom_grey"
+            }`}
+            size={32}
+          />
         </button>
       </div>
       <div
         className={`safe  ${
           !navOpen ? "h-0" : "h-nav_menu"
-        } px-4 font-medium transition-all duration-300 ease-in text-${themeColor} truncate flex flex-col w-4/5 mx-auto text-xl bg-white`}
+        } px-4 font-medium transition-all duration-300 ease-in ${
+          themeColor === "custom_crimson"
+            ? "text-custom_crimson"
+            : themeColor === "custom_blue"
+            ? "text-custom_blue"
+            : themeColor === "custom_indigo"
+            ? "text-custom_indigo"
+            : themeColor === "custom_aqua"
+            ? "text-custom_aqua"
+            : themeColor === "custom_black"
+            ? "text-custom_black"
+            : " text-custom_grey"
+        } truncate flex flex-col w-4/5 mx-auto text-xl bg-white`}
       >
         <Link to="/#home" name="Home" />
         <Link to="/#about" name="About" />

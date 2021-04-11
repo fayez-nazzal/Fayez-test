@@ -103,7 +103,19 @@ const Contact = () => {
         />
         {errors.message && <Alert text={errors.message.message} />}
         <button
-          className={`safe  bg-${themeColor} focus:outline-none flex items-center justify-center px-8 py-3 text-xl text-white uppercase rounded-full`}
+          className={`safe  ${
+            themeColor === "custom_crimson"
+              ? "bg-custom_crimson"
+              : themeColor === "custom_blue"
+              ? "bg-custom_blue"
+              : themeColor === "custom_indigo"
+              ? "bg-custom_indigo"
+              : themeColor === "custom_aqua"
+              ? "bg-custom_aqua"
+              : themeColor === "custom_black"
+              ? "bg-custom_black"
+              : " bg-custom_grey"
+          } focus:outline-none flex items-center justify-center px-8 py-3 text-xl text-white uppercase rounded-full`}
           type="submit"
         >
           submit
