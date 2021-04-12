@@ -61,6 +61,14 @@ body {
   animation-direction: alternate-reverse;
 }
 
+.slide {
+  height: auto;
+}
+
+.portfolio {
+  height: 42rem;
+}
+
 @media only screen and (min-width: 800px) {
   .resize-circle {
     bottom: 200px;

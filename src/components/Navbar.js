@@ -19,11 +19,10 @@ const Navbar = () => {
   const dispatch = useDispatch();
   const themeColor = useSelector((state) => state.theme.currentColor);
   let { lg } = useBreakpoints({
-    xs: { min: 0, max: null },
-    sm: { min: 640, max: null },
-    md: { min: 768, max: null },
     lg: { min: 1280, max: null },
   });
+
+  console.log(lg);
 
   const onMenuButtonClick = () => {
     dispatch(toggleNavMenu());
@@ -56,8 +55,8 @@ const Navbar = () => {
       </div>
       <div
         className={`safe  ${
-          !lg && (!navOpen ? "h-0" : "h-nav_menu")
-        } px-4 font-medium transition-all duration-300 lg:justify-around ease-in ${
+          !navOpen ? "h-0" : "h-nav_menu"
+        } lg:h-full px-4 font-medium transition-all duration-300 lg:justify-around ease-in ${
           lg ? "text-white" : textClassFromTheme(themeColor)
         } truncate flex ${
           !lg && "flex-col"

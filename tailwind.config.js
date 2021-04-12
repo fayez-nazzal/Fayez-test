@@ -25,9 +25,13 @@ module.exports = {
       },
       boxShadow: {
         md: "0px 0px 7px 1px rgba(0, 0, 0, 0.15)",
+        inset: "inset 0 0 0 1500px rgba(0,0,0,.5)",
       },
       borderWidth: {
         2.5: "2.5px",
+      },
+      screens: {
+        lg: "1280px",
       },
     },
   },

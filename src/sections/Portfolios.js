@@ -54,7 +54,7 @@ const Portfolios = () => {
           onInit={(swiper) => setSwiper(swiper)}
           grabCursor
         >
-          <SwiperSlide>
+          <SwiperSlide className="slide">
             <PortfolioCard
               imgSrc={wwt}
               date="2020.9-2020.11"
@@ -69,7 +69,7 @@ const Portfolios = () => {
             modules in frontend.`}
             </PortfolioCard>
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide className="slide">
             <PortfolioCard
               imgSrc={racing}
               date="2017.5-2017.11"
@@ -86,7 +86,7 @@ const Portfolios = () => {
               provided UI.
             </PortfolioCard>
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide className="slide">
             <PortfolioCard
               imgSrc={msg}
               date="2019.10-2019.11"
@@ -99,7 +99,7 @@ const Portfolios = () => {
               app protect your privacy and security.
             </PortfolioCard>
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide className="slide">
             <PortfolioCard
               imgSrc={frozenTest}
               date="2020.3-2020.3"
@@ -110,7 +110,7 @@ const Portfolios = () => {
               in recent. Created only the first landing page.
             </PortfolioCard>
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide className="slide">
             <PortfolioCard
               imgSrc={responsive}
               date="2020.5-2020.6"
@@ -122,7 +122,7 @@ const Portfolios = () => {
               design.`}
             </PortfolioCard>
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide className="slide">
             <PortfolioCard
               imgSrc={landing}
               date="2020.10-2020.11"
@@ -135,7 +135,7 @@ const Portfolios = () => {
               production store website, or shoping page, etc.
             </PortfolioCard>
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide className="slide">
             <PortfolioCard
               imgSrc={canvas}
               date="2020.1-2020.3"
@@ -150,7 +150,7 @@ const Portfolios = () => {
               There are so many animations respectively.`}
             </PortfolioCard>
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide className="slide">
             <PortfolioCard
               imgSrc={ecommerce}
               date="2019.11-2020.7"
@@ -164,7 +164,7 @@ const Portfolios = () => {
               styles with css and less files for front-end.
             </PortfolioCard>
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide className="slide">
             <PortfolioCard
               imgSrc={reactScss}
               date="2019.3-2019.10"
