@@ -17,9 +17,9 @@ const About = () => {
       id="about"
       className="pb-14 md:grid-rows-1 grid grid-cols-12 grid-rows-2 px-16 pt-32"
     >
-      <ViewportNode onEnterViewport={onViewportEnter} />
       <div className="md:row-end-3 md:col-start-7 lg:col-start-5 col-start-1 col-end-13 row-start-1 row-end-2">
         <SectionLabel>About Me</SectionLabel>
+        <ViewportNode onEnterViewport={onViewportEnter} />
         <h2 className="mt-4 text-4xl font-bold">Senior Full-Stack Developer</h2>
         <p className="text-custom_grey text-md my-5 tracking-wide">
           I hope my profile explains my full-stack skills and experiences on Web
