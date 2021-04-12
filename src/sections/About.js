@@ -15,18 +15,20 @@ const About = () => {
   return (
     <section
       id="about"
-      className="pb-14 md:grid-rows-1 grid grid-cols-12 grid-rows-2 px-16 pt-32"
+      className="sm:pb-14 md:grid-rows-1 xl2:px-32 xl3:px-48 sm:pt-32 sm:px-16 sm:grid-rows-2 grid grid-cols-12 px-6 pt-20"
     >
       <div className="md:row-end-3 md:col-start-7 lg:col-start-5 col-start-1 col-end-13 row-start-1 row-end-2">
         <SectionLabel>About Me</SectionLabel>
         <ViewportNode onEnterViewport={onViewportEnter} />
-        <h2 className="mt-4 text-4xl font-bold">Senior Full-Stack Developer</h2>
-        <p className="text-custom_grey text-md my-5 tracking-wide">
+        <h2 className="sm:text-3xl md:text-4xl mt-4 text-2xl font-bold">
+          Senior Full-Stack Developer
+        </h2>
+        <p className="text-custom_grey text-md lg:text-xl xl3:text-2xl my-5 tracking-wide">
           I hope my profile explains my full-stack skills and experiences on Web
           development for more than 5 years of hands-on efficiently coding
           websites and applications using modern technologies.
         </p>
-        <ul className="text-custom_grey text-xl">
+        <ul className="text-custom_grey sm:text-xl text-lg">
           <Li>React/Redux, Next, Vue, Svelte, Quasar with JS/TS</Li>
           <Li>Material-UI, Tailwind-CSS, Antd, Styled-Component</Li>
           <Li>Python/Django, DRF, Node/Express, PHP, Laravel on back-end</Li>

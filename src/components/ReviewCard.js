@@ -4,10 +4,10 @@ import { FaQuoteLeft, FaQuoteRight, FaStar, FaEnvelope } from "react-icons/fa";
 const ReviewCard = (props) => {
   return (
     <div className="z-10 h-full p-4 m-2 bg-white rounded-lg shadow-md">
-      <div className="px-6">
-        <p className="text-custom_grey text-xl italic tracking-wide">
+      <div className="sm:px-4 md:px-6 px-2">
+        <p className="text-custom_grey sm:text-lg md:text-xl text-lg italic tracking-wide">
           <FaQuoteLeft
-            className="inline-block mr-3"
+            className=" inline-block mr-3"
             size={18}
             color="#555555"
           />
@@ -33,7 +33,7 @@ const ReviewCard = (props) => {
             <h5 className="text-custom_blue text-xl font-semibold text-left">
               {props.from}
             </h5>
-            <p className="text-custom_grey text-lg">
+            <p className="text-custom_grey sm:flex-row sm:text-lg flex flex-col text-sm">
               <FaEnvelope className="inline-block mr-2" color="#666666" />
               {props.email}
             </p>
@@ -41,7 +41,7 @@ const ReviewCard = (props) => {
         </div>
         <div className="px-6 my-4 text-left">
           <a
-            className="hover:text-blue-600 text-xl tracking-wide text-blue-500"
+            className="hover:text-blue-600 sd:text-xl text-lg tracking-wide text-blue-500"
             href={props.link}
           >
             {props.linkText}

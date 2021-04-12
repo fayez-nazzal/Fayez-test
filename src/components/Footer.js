@@ -10,25 +10,16 @@ import {
 } from "react-icons/fa";
 import IconedLink from "./IconedLink";
 import { useSelector } from "react-redux";
+import { bgClassFromTheme } from "../helpers/classFromTheme";
 
 const Footer = () => {
   const themeColor = useSelector((state) => state.theme.currentColor);
 
   return (
     <div
-      className={`safe  ${
-        themeColor === "custom_crimson"
-          ? "bg-custom_crimson"
-          : themeColor === "custom_blue"
-          ? "bg-custom_blue"
-          : themeColor === "custom_indigo"
-          ? "bg-custom_indigo"
-          : themeColor === "custom_aqua"
-          ? "bg-custom_aqua"
-          : themeColor === "custom_black"
-          ? "bg-custom_black"
-          : " bg-custom_grey"
-      } sticky pt-20 text-center`}
+      className={`safe  ${bgClassFromTheme(
+        themeColor
+      )} sticky pt-20 text-center`}
     >
       <div className="m-auto">
         <Logo />

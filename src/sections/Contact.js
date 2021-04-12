@@ -40,11 +40,11 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="flex flex-col items-center justify-center px-16 pt-24 pb-12 text-center"
+      className="sm:px-6 md:px-12 lg:px-16 flex flex-col items-center justify-center px-4 pt-24 pb-12 text-center"
     >
       <ViewportNode onEnterViewport={onViewportEnter} />
       <SectionLabel>Contact Me</SectionLabel>
-      <h2 className="z-10 mt-4 mb-12 text-4xl font-bold tracking-wide text-center">
+      <h2 className="sm:mb-6 md:mb-8 lg:mb-12 z-10 mt-4 text-4xl font-bold tracking-wide text-center">
         Please send me your info in this form
       </h2>
       <div className="md:flex-row-reverse flex flex-col w-full">
@@ -66,7 +66,7 @@ const Contact = () => {
           />
         </div>
         <form
-          className="border-box md:mx-8 md:grid md:grid-cols-2 md:gap-10 w-full px-4"
+          className="border-box md:mx-2 lg:mx-6 lg:grid lg:grid-cols-2 lg:gap-10 md:px-2 lg:px-4 w-full"
           onSubmit={handleSubmit(onSubmit)}
         >
           <input

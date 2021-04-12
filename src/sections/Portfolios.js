@@ -34,14 +34,14 @@ const Portfolios = () => {
   return (
     <section
       id="portfolios"
-      className="flex flex-col items-center justify-center px-16 text-center"
+      className="sm:px-16 flex flex-col items-center justify-center text-center"
     >
       <ViewportNode onEnterViewport={onViewportEnter} />
       <SectionLabel>Portfolios</SectionLabel>
-      <h2 className="mx-8 mb-12 text-4xl font-bold tracking-wide text-center">
+      <h2 className="sm:text-3xl md:text-4xl sm:mx-8 md:mb-6 sm:mb-4 lg:mb-12 mt-3 text-2xl font-bold tracking-wide text-center">
         Here are my representative projects
       </h2>
-      <div className="border-box lg:px-32 w-screen px-16">
+      <div className="border-box lg:px-32 md:px-16 sm:px-8 w-screen px-4">
         <Swiper
           slidesPerView={lg ? 2 : 1}
           spaceBetween={32}

@@ -23,14 +23,14 @@ const Services = () => {
   return (
     <section
       id="services"
-      className="relative top-0 left-0 flex flex-col items-center justify-center py-32 overflow-auto"
+      className="md:py-32 sm:py-24 relative top-0 left-0 flex flex-col items-center justify-center py-16 overflow-auto"
     >
       <SectionLabel>Services</SectionLabel>
-      <h2 className="mb-12 text-4xl font-bold tracking-wide">
+      <h2 className="sm:text-3xl md:text-4xl mt-3 mb-12 text-2xl font-bold tracking-wide">
         Here are my expertises
       </h2>
       <ViewportNode onEnterViewport={onViewportEnter} />
-      <div className="text-custom_grey md:grid-rows-3 lg:grid-rows-2 grid self-stretch grid-cols-6 gap-8 px-16">
+      <div className="text-custom_grey md:grid-rows-3 lg:grid-rows-2 sm:px-12 md:px-16 grid self-stretch grid-cols-6 gap-8 px-6">
         <div className="md:col-end-4 lg:col-end-3 col-start-1 col-end-7">
           <Card icon={FaDeaf} title="Innovative Ideas">
             Innovative Ideas are the most important things in web development.

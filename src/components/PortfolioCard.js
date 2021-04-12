@@ -10,12 +10,12 @@ const PortfolioCard = (props) => {
     <div
       onMouseEnter={() => setGroupHover(true)}
       onMouseLeave={() => setGroupHover(false)}
-      className="portfolio border-box group z-40 grid grid-rows-2 m-2 shadow-md"
+      className="portfolio border-box group z-40 grid grid-rows-2 shadow-md"
     >
       <div
         className={`${
           groupHover && "shadow-inset"
-        } transition-all duration-300 ease-in-out flex items-center justify-center`}
+        } w-full transition-all duration-300 ease-in-out flex items-center justify-center`}
         style={{
           backgroundImage: `url("${props.imgSrc}")`,
           backgroundSize: "cover",

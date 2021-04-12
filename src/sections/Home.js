@@ -22,9 +22,9 @@ const Home = () => {
   return (
     <section
       id="home"
-      className={`safe  diagonal-section ${bgClassFromTheme(
+      className={`safe diagonal-section ${bgClassFromTheme(
         themeColor
-      )} relative py-32`}
+      )} relative py-24 sm:py-32 w-screen`}
     >
       <ViewportNode onEnterViewport={onViewportEnter} />
       <div
@@ -59,11 +59,11 @@ const Home = () => {
             />
           </ReactFloaterJs>
         </div>
-        <div className="sm:col-end-6 md:col-end-11 lg:row-start-1 lg:row-end-5 lg:col-end-4 z-40 col-start-1 col-end-7 row-start-3 row-end-5 tracking-wider">
-          <h1 className=" w-5/6 mx-auto text-5xl font-bold text-white">
+        <div className="xl2:px-6 sm:col-end-6 md:col-end-11 lg:row-start-1 lg:row-end-5 lg:col-end-4 z-40 col-start-1 col-end-7 row-start-3 row-end-5 tracking-wider">
+          <h1 className=" sm:mt-0 sm:text-4xl md:text-5xl w-5/6 mx-auto mt-2 text-2xl font-bold text-white">
             Senior full-stack Developer
           </h1>
-          <p className="border-box w-5/6 mx-auto mt-3 text-xl text-left text-white">
+          <p className="border-box xl2:text-2xl xl3:text-3xl sm:text-xl w-5/6 mx-auto mt-3 text-lg text-left text-white">
             {`As I'm a senior full-stack Web Developer with over 5 years of
             experience, if you have the idea then I will make sure it's
             implemented perfectly. My primary skill set includes React/Redux,
@@ -75,7 +75,7 @@ const Home = () => {
             <a
               className={`safe  ${textClassFromTheme(
                 themeColor
-              )} px-8 py-3 text-xl font-semibold bg-white rounded-full`}
+              )} px-8 py-3 text-lg sm:text-xl xl:text-2xl font-semibold xl2:text-2xl xl3:text-3xl bg-white rounded-full`}
               href={pdf}
               target="_blank"
               rel="noreferrer"

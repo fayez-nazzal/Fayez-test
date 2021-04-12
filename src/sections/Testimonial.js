@@ -29,14 +29,14 @@ const Testimonial = () => {
       id="testimonial"
       className={`safe  testimonial ${bgClassFromTheme(
         themeColor
-      )} flex flex-col items-center justify-center px-16 pt-16 pb-12 text-center`}
+      )} flex flex-col items-center justify-center sm:px-8 px-2 md:px-16 pt-6 sm:pt-12 md:pt-16 pb-12 text-center`}
     >
       <ViewportNode onEnterViewport={onViewportEnter} />
       <SectionLabel whiteText>TESTIMONIAL</SectionLabel>
-      <h2 className="z-10 mt-4 mb-12 text-4xl font-bold tracking-wide text-center text-white">
+      <h2 className=" sm:text-3xl md:text-4xl z-10 mt-4 mb-12 text-2xl font-bold tracking-wide text-center text-white">
         My Satisfied Clients Feedback
       </h2>
-      <div className="border-box w-screen px-16">
+      <div className="border-box sm:px-8 md:px-16 w-screen px-4">
         <Swiper
           autoplay={{
             delay: 3500,

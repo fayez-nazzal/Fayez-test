@@ -18,7 +18,7 @@ const SwiperButtons = (props) => {
   };
 
   return (
-    <div className="flex items-center justify-center mt-16 mb-24">
+    <div className=" lg:mt-16 lg:mb-16 flex items-center justify-center my-8">
       <button className={classes} onClick={slideLeft}>
         {"<"}
       </button>
